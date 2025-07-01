@@ -3,7 +3,6 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
@@ -16,7 +15,6 @@
         <tbody>
             <?php foreach ($signatures as $signature): ?>
             <tr>
-                <td><?= htmlspecialchars($signature['id']) ?></td>
                 <td><?= htmlspecialchars($signature['nom']) ?></td>
                 <td><?= htmlspecialchars($signature['prenom']) ?></td>
                 <td><?= htmlspecialchars($signature['mail']) ?></td>
