@@ -1,26 +1,22 @@
 <?php
+require_once(__DIR__ . '/controller/SignatureController.php');
 
-include("./bdd/bdd.php");
-include('view/commun/header.php');
+$controller = new SignatureController();
+$page = $_GET['page'] ?? 'signature';
 
+require_once(__DIR__ . '/view/commun/header.php');
 
-// le routing
-$page = isset($_GET['page']) ? $_GET['page'] : 'consultation';
-
-switch ($page) {
-    case 'config':
-        include('view/signature.php');
-        break;
-
-
-    default:
-        include('view/consultations.php');
-        break;
+if ($page === 'signature') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $controller->ajouterSignature();
+    }
+    require_once(__DIR__ . '/view/signature.php');
+} elseif ($page === 'consultation') {
+    $signatures = $controller->afficherSignatures();
+    require_once(__DIR__ . '/view/consultations.php');
+} else {
+    echo "<h2>Page non trouvée</h2>";
 }
 
-
-
-include('view/commun/footer.php');
-
-
+require_once(__DIR__ . '/view/commun/footer.php');
 ?>

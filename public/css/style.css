@@ -1,0 +1,154 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #d4af37;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #d4af37;
+}
+
+main {
+    flex: 1;
+    width: 95%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-container,
+.table-container {
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #d4af37;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.signature-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.signature-form input,
+.signature-form textarea,
+.signature-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.signature-form input:focus,
+.signature-form textarea:focus,
+.signature-form select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+    outline: none;
+}
+
+.signature-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.signature-form button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.signature-form button:hover {
+    background-color: #c19e2f;
+    transform: translateY(-2px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+table th,
+table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f9f4e3;
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #fdf8e7;
+}
+
+footer {
+    background-color: #d4af37;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}

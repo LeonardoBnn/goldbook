@@ -1,29 +1,39 @@
-<div >
-    <form action="index.php?page=inscription" method="post">
-        <label for="nom">Nom :</label>
-        <input type="text" name="nom" id="nom" required>
+<main>
+    <div class="form-container">
+        <h1>📜 Livre d'Or - Signature</h1>
+        <form method="POST" action="index.php?page=signature" class="signature-form">
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" name="prenom" id="prenom" required>
+            <div style="display:none;">
+                <label>Ne pas remplir ce champ :</label>
+                <input type="text" name="website" value="">
+            </div>
 
-        <label for="mail">Email :</label>
-        <input type="email" name="mail" id="mail" required>
+            <label>Nom :</label>
+            <input type="text" name="nom" maxlength="100" required>
 
-        <label for="numero">Numéro de téléphone :</label>
-        <input type="text" name="numero" id="numero" required>
+            <label>Prénom :</label>
+            <input type="text" name="prenom" maxlength="100" required>
 
-        <label for="sex">Sexe :</label>
-        <select name="sex" id="sex" required>
-            <option value="">-- Sélectionnez --</option>
-            <option value="masculin">Masculin</option>
-            <option value="feminin">Féminin</option>
-        </select>
+            <label>Email :</label>
+            <input type="email" name="mail" maxlength="255" required>
 
-        <label for="commentaire">Commentaire :</label>
-        <input type="text" name="commentaire" id="commentaire" required>
+            <label>Numéro :</label>
+            <input type="text" name="numero" maxlength="20" required>
 
-        <label for="signature">Signature :</label>
-        <input type="text" name="signature" id="signature" required>
+            <label>Sexe :</label>
+            <select name="sex" required>
+                <option value="masculin">Masculin</option>
+                <option value="feminin">Féminin</option>
+            </select>
 
-        <button type="submit" name="valider">Signée</button>
-    </form>
+            <label>Commentaire :</label>
+            <textarea name="commentaire" maxlength="500" required></textarea>
+
+            <label>Signature :</label>
+            <input type="text" name="signature" maxlength="100" required>
+
+            <button type="submit">Signer</button>
+        </form>
+    </div>
+</main>
